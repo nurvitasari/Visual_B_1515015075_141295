@@ -143,7 +143,7 @@ public class tabel extends javax.swing.JFrame {
         );
 
         jPanel5.setBackground(new java.awt.Color(0, 102, 102));
-        jPanel5.setLayout(new java.awt.GridLayout());
+        jPanel5.setLayout(new java.awt.GridLayout(1, 0));
 
         tambah.setText("TAMBAH");
         tambah.addActionListener(new java.awt.event.ActionListener() {
@@ -226,7 +226,12 @@ public class tabel extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tenggarong", "Balikpapan", "Samarindaa", "Bontang", "Marangkayu", "Bunyu" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -234,11 +239,7 @@ public class tabel extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(44, 44, 44)
-                        .addComponent(txtnama, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
@@ -246,8 +247,12 @@ public class tabel extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nope, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(49, 49, 49)
+                            .addComponent(nope, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtnama, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(50, 50, 50)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jRadioButton1)
@@ -400,7 +405,7 @@ public class tabel extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
-          tambah.setEnabled(false);
+        tambah.setEnabled(true);
         simpan.setEnabled(false);
         update.setEnabled(false);
         hapus.setEnabled(false);
@@ -432,7 +437,7 @@ public class tabel extends javax.swing.JFrame {
         if(!nama.equals("")&&!no.equals("")&&!kelamin.equals("")&&!asal.equals(""))
         {
             
-            tambah.setEnabled(true);
+            
             update.setEnabled(true);
             hapus.setEnabled(true);
             simpan.setEnabled(true);
@@ -441,7 +446,7 @@ public class tabel extends javax.swing.JFrame {
         else
         {
             
-            tambah.setEnabled(false);
+            
             update.setEnabled(false);
             hapus.setEnabled(false);
             simpan.setEnabled(false);
@@ -496,6 +501,10 @@ public class tabel extends javax.swing.JFrame {
         // TODO add your handling code here:
           setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
     }//GEN-LAST:event_formWindowClosing
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments
